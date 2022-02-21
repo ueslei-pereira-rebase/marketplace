@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    hostname: postgres
+    volumes:
+      - marketplace_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+  app:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    container_name: marketplace
+    environment:
+      POSTGRESQL_HOST: postgres
+      POSTGRESQL_USER: postgres
+      POSTGRESQL_PASSWORD: postgres
+    volumes:
+      - .:/opt/marketplace
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+
+volumes:
+  marketplace_data:

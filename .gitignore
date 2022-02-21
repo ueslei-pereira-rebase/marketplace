@@ -10,6 +10,7 @@ capybara-*.html
 *.orig
 rerun.txt
 pickle-email-*.html
+config/master.key
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -64,4 +65,8 @@ yarn-debug.log*
 
 # Ignore uploaded files in development
 /storage/*
+<<<<<<< HEAD
 !/storage/.keep
+=======
+!/storage/.keep
+>>>>>>> da8660ad9a8a170382f43df1100662717799110b
