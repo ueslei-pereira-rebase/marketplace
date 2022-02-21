@@ -1,24 +1,31 @@
-# README
+# MarketPlace Company
+This project allow empolyee of the company can buy and sell products between themselves
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Environment dependencies
 
-Things you may want to cover:
+* Ruby 2.7.0
+* PostgreSQL latest
+* Docker ([windows](https://docs.docker.com/desktop/windows/install/) [linux]((https://docs.docker.com/engine/install/ubuntu/)))
 
-* Ruby version
+## Setup with docker
 
-* System dependencies
+Just run the setup script to configure the app:
 
-* Configuration
+```bash
+ docker-compose build
+```
 
-* Database creation
+Now you should be able to run the app:
 
-* Database initialization
+```bash
+ make start
+```
 
-* How to run the test suite
+Now you should access url:
 
-* Services (job queues, cache servers, search engines, etc.)
+`http://localhost:3000/`
 
-* Deployment instructions
+## Other information
 
-* ...
+Coming soon...
+
