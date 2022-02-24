@@ -12,7 +12,7 @@ class User < ApplicationRecord
     def get_company
       domain_name = email.split("@")[1].split('.')[0]
       company = Company.find_by(name: domain_name)
-      if company.present?
+      if company.present? && company.is_employee?(email)
         self.company = company
       else
         errors.add(:company, "Não está registrada")
