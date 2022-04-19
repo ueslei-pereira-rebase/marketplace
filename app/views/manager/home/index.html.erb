@@ -1,0 +1,4 @@
+<p>Bem vindo Administrador</p>
+<% if admin_signed_in?  %>
+  <%= link_to "Sair", destroy_admin_session_path, :method => :delete %>
+<% end %>
