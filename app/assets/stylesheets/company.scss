@@ -1,0 +1,54 @@
+.form-register-company{
+  border-radius: 8px;
+  width: 1000px;
+  height: 644px;
+  background: white;
+  left: 41%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // margin: 67px 0 120px 71px;
+  // p{
+  //   margin: 67px 0 35px 71px;
+  //   font-size: 18px;
+  //   color: black;
+  //   font-family: 'Reboto';
+  // }
+  .input-box {
+    margin-top: 47px;
+  }
+}
+
+.content-middle-body {
+  height: 80%;
+  display: flex;
+}
+
+#form-register-company {
+  margin: 67px 0 120px 71px;
+    p{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    font-family: 'Reboto';
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 390px;
+  }
+  input:focus {
+    outline: none;
+  }
+
+  input[type=submit] {
+    border-radius: 8px;
+    color: white;
+    width: 360px;
+    height: 57px;
+    background: #3483FA;
+  }
+}
