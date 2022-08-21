@@ -1,0 +1,21 @@
+.btn-sidenav{
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar-side {
+  height: 100%;
+  display: inline-block;
+}
+
+.navbar-side .btn-register-company {
+  color: black;
+  font-family: 'Roboto';
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-side .btn-register-company:hover{
+  background-color: #9FFFDD;
+}

@@ -1,10 +1,24 @@
-body {
+@media only screen and (max-width: 1250px)  {
+  body {
+    width: 1250px;
+  }
+}
+
+.main {
   background: #E3E3E3;
   margin: 0;
   height: 100vh;
   display: flex;
   flex: 1;
   flex-direction: column;
+
+  .alert {
+    margin-bottom: 0;
+    border: 0;
+    margin-top: 72px;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .box-auth {
@@ -21,10 +35,6 @@ body {
     border-radius: 10px;
     box-shadow: 0px 1px 2px;
   }
-}
-
-.box-auth div {
-  // width: 360px;
 }
 
 .wrapper{
@@ -54,7 +64,7 @@ body {
 
 }
 
-.new_user {
+.new_user, .new_admin{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -125,3 +135,4 @@ body {
     color: green;
   }
 }
+
