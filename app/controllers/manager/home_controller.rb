@@ -1,6 +1,5 @@
 module Manager
-  class HomeController < ApplicationController
-    before_action :authenticate_admin!
+  class HomeController < ManagerController
 
     def index;end
   end
