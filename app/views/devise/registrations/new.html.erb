@@ -59,9 +59,13 @@
           <div>
             <%= f.check_box :agree %>
             <%= f.label :agree, "Aceito os Termos e condições e autorizo o uso dos meus dados de acordo com a Declaração de privacidade" %>
+
+
+
+                        
           </div>
-          <% if resource.errors.messages[:tos_agreement].present? %>
-            <span class="field-error"><%= resource.errors.messages[:tos_agreement].first %></span>
+          <% if resource.errors.messages[:agree].present? %>
+            <span class="field-error"><%= resource.errors.messages[:agree].first %></span>
           <% end %>
         </div>
       </div>
