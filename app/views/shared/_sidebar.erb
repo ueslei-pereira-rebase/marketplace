@@ -1,6 +1,0 @@
-<div class="navbar-side">
-	<%= link_to 'Cadastrar empresa', new_manager_company_path, class: "btn-register-company" %>
-	<% if admin_signed_in?  %>
-  	<%= link_to "Sair", destroy_admin_session_path, :method => :delete, class: "btn-register-company" %>
-	<% end %>
-</div>

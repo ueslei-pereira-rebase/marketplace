@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   before_validation :get_company
-  validates_acceptance_of :tos_agreement, allow_nil: false, on: :create
+  validates_acceptance_of :agree, allow_nil: false, on: :create
 
 
     private

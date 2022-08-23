@@ -1,4 +1,4 @@
-module Maneger
+module Manager
   class ManagerController < ApplicationController
     before_action :authenticate_admin!
 
