@@ -58,11 +58,12 @@
         <div class="input-box">
           <div>
             <%= f.check_box :agree %>
-            <%= f.label :agree, "Aceito os Termos e condições e autorizo o uso dos meus dados de acordo com a Declaração de privacidade" %>
-
-
-
-                        
+            <%= f.label :agree do %>
+                Li e concordo com os  
+                <a href="#modal_term_accept" data-bs-toggle="modal" data-bs-target="#modal_term_accept">
+                  Termos de uso e Politia de Privacidade
+                </a>
+            <%end%>
           </div>
           <% if resource.errors.messages[:agree].present? %>
             <span class="field-error"><%= resource.errors.messages[:agree].first %></span>
@@ -77,11 +78,11 @@
           </div>
         </div>
       </div>
-
       <div class="btn-return-sing-in">
         <%= render "devise/shared/links" %>
       </div>
     <% end %>
-
   </div>
 </div>
+
+  <%= render "modal_term_accept" %>
