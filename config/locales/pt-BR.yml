@@ -157,6 +157,13 @@ pt-BR:
         cnpj: CNPJ
         email: E-mail
         address: Endereço
+      user:
+        name: Nome
+        last_name: Sobrenome
+        cpf: CPF
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirme sua senha
   number:
     currency:
       format:

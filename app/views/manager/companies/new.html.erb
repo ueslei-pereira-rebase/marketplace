@@ -3,7 +3,7 @@
   <%= render "shared/sidebar" %>
   <div class='form-register-company'>
     <%= form_with model: [:manager, @company], id: "form-register-company" , local: true do |form| %>
-      <p id="title-register-company">Dados para cadastro</p>
+      <p id="title-register-user">Dados para cadastro</p>
       <div class="input-box">
         <%= form.text_field :name, required: true, placeholder: true %>
       </div>

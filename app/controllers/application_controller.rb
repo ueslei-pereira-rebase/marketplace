@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
     return account_root_path if resource.is_a?(User)
@@ -9,4 +10,12 @@ class ApplicationController < ActionController::Base
     return new_user_session_path if resource == :user
     return new_admin_session_path if resource == :admin
   end
+
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:password, :password_confirmation, :email, :name, :last_name, :cpf, :agree) }
+  end
+
 end

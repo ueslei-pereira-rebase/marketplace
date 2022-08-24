@@ -1,6 +1,5 @@
 module Manager
-  class CompaniesController < ApplicationController
-    before_action :authenticate_admin!
+  class CompaniesController < ManagerController
 
     def new
       @company = Company.new

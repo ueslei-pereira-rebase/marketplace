@@ -1,6 +1,5 @@
 module Account
-  class HomeController < ApplicationController
-    before_action :authenticate_user!
+  class HomeController < AccountController
 
     def index;end
   end

@@ -1,4 +1,4 @@
-<p>Bem vindo usuario</p>
-<% if user_signed_in?  %>
-  <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
-<% end %>
+<%= render "shared/layout" %>
+<div class='content-middle-body'>
+  <%= render "shared/sidebar_user" %>
+</div>
