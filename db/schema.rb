@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_025726) do
     t.integer "subsidiary"
     t.string "department"
     t.string "phone"
-    t.string "Mobile"
+    t.string "mobile"
     t.integer "status", default: 0, null: false
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true

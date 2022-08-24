@@ -1,5 +1,5 @@
 class AddMobileToUsers < ActiveRecord::Migration[6.0]
   def change
-    add_column :users, :Mobile, :string
+    add_column :users, :mobile, :string
   end
 end
