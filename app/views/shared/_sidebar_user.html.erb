@@ -1,6 +1,6 @@
 <div class="navbar-side">
 	<div class= "btn-sidebar"><%=image_tag('profile.svg')%></div>
 	<% if user_signed_in?  %>
-  	<%= link_to "Sair", destroy_user_session_path, :method => :delete, class: "btn-sidebar" %>
+  	<%= button_to "Sair", destroy_user_session_path, method: :delete, class: "btn-sidebar" %>
 	<% end %>
 </div>

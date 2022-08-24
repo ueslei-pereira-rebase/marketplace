@@ -9,11 +9,14 @@
 }
 
 .navbar-side .btn-sidebar {
+  border: none;
   color: black;
   font-family: 'Roboto';
   font-size: 18px;
   text-decoration: none;
   display: block;
+  background: white;
+  width: 100%;
 }
 
 .navbar-side .btn-sidebar:hover{
