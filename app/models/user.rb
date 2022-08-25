@@ -8,6 +8,7 @@ class User < ApplicationRecord
   before_validation :get_company
   validates_acceptance_of :agree, allow_nil: false, on: :create
 
+  enum status: { inactive: 0 , active: 1}
 
     private
     

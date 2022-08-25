@@ -1,4 +1,4 @@
-.form-register-company{
+.form-register{
   border-radius: 8px;
   width: 1000px;
   height: 644px;
@@ -19,7 +19,7 @@
   display: flex;
 }
 
-#form-register-company {
+#form-register {
   margin: 67px 0 120px 71px;
     p{
     font-size: 18px;
@@ -42,5 +42,18 @@
     width: 360px;
     height: 57px;
     background: #3483FA;
+  }
+
+  .btn-link-to {
+    border-radius: 8px;
+    color: white;
+    width: 360px;
+    height: 57px;
+    background: #3483FA;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
 }

@@ -1,0 +1,29 @@
+<%= render "shared/layout" %>
+<div class='content-middle-body'>
+  <%= render "shared/sidebar_user" %>
+  <div class='form-register'>
+    <%= form_with model: [:account, @user], id: "form-register" , local: true do |form| %>
+      <p id="title-register-user">Dados do cadastro</p>
+      <div class="input-box">
+        <%= form.text_field :subsidiary, value: @user.subsidiary, disabled: true %>
+      </div>
+
+      <div class="input-box">
+        <%= form.text_field :subsidiary, value: @user.department, disabled: true %>
+      </div>
+
+      <div class="input-box">
+        <%= form.text_field :subsidiary, value: @user.phone, disabled: true %>
+      </div>
+
+
+      <div class="input-box">
+        <%= form.text_field :subsidiary, value: @user.mobile, disabled: true %>
+      </div>
+
+      <div class="input-box">
+          <%= link_to "Atualizar", edit_account_user_path(current_user), class: 'btn-link-to' %>
+      </div>
+    <% end %>
+  </div>
+</div>

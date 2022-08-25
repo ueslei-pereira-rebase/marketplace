@@ -1,0 +1,31 @@
+<%= render "shared/layout" %>
+<div class='content-middle-body'>
+  <%= render "shared/sidebar_user" %>
+  <div class='form-register'>
+    <%= form_with model: [:account, @user], id: "form-register" , local: true do |form| %>
+      <p id="title-register-user">Complete seu perfil e tenha acesso total a plataforma</p>
+      <%= form.hidden_field :id, value: @user.id %>
+      <div class="input-box">
+        <%= form.text_field :subsidiary, required: true, placeholder: true %>
+      </div>
+
+      <div class="input-box">
+        <%= form.text_field :department, max: 14, required: true ,placeholder: true%>
+      </div>
+
+      <div class="input-box">
+        <%= form.telephone_field :phone, required: true, placeholder: true %>
+      </div>
+
+
+      <div class="input-box">
+        <%= form.telephone_field :mobile, required: true,  placeholder: true %>
+      </div>
+
+      <div class="input-box">
+        <%= form.submit "Salvar informações" %>
+      </div>
+    <% end %>
+  
+  </div>
+</div>

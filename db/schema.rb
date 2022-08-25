@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_025726) do
     t.string "last_name"
     t.string "cpf"
     t.boolean "agree"
-    t.integer "subsidiary"
+    t.string "subsidiary"
     t.string "department"
     t.string "phone"
     t.string "mobile"
