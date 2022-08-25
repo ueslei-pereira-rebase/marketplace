@@ -23,7 +23,7 @@ module Account
     private
 
     def params_permitted
-      params.require(:user).permit(:id, :subsidiary, :department, :phone, :mobile)
+      params.require(:user).permit(:id, :subsidiary, :department, :phone, :mobile, :avatar)
     end
 
   end

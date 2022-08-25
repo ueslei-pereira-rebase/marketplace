@@ -9,7 +9,7 @@ module Account
       user = User.find(params[:id])
       params.delete(:id)
 
-      if user.update(params)
+      if user.update(params) && update_avatar(user)
         build_result(success: true, context: "Cadastro finalizado", object: user)
       else
         build_result(success: false, context: "Não foi possivel completar seu cadsatro, tente novamente", object: user)
@@ -17,6 +17,11 @@ module Account
     end
 
     private
+
+    def update_avatar(user)
+      return true if params[:avatar].nil?
+      user.avatar.attach(params[:avatar])
+    end
 
     def build_result(success: nil, context: nil, object: nil)
       OpenStruct.new(
