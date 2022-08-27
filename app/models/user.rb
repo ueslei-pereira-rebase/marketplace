@@ -10,12 +10,13 @@ class User < ApplicationRecord
   validates_acceptance_of :agree, allow_nil: false, on: :create
   after_create :attach_avatar
 
-  enum status: { inactive: 0 , active: 1}
+  enum status: { inactive: 0 , active: 1 }
+  enum gender: { female: 0, male: 1 }
 
     private
 
     def attach_avatar
-      self.avatar.attach(io: File.open('app/assets/images/female.jpg'), filename: 'female.jpg')
+      self.avatar.attach(io: File.open("app/assets/images/#{self.gender}.jpg"), filename: "profile.jpg")
     end
     
     def get_company

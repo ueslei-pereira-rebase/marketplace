@@ -42,7 +42,6 @@
     .container {
       margin: 0 auto;
       display: flex;
-      border: 1px solid #ccc;
     }
 
     .item {
@@ -51,6 +50,7 @@
       padding: 0 10px;
       text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }

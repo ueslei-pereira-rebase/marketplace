@@ -4,11 +4,10 @@
   <div class="wrapper">
     <div class="box-auth">
       <div class="box-wrapper">
-        <div class="container stretch">
-          <div class="form-register item">
-            <%= form_with model: [:account, @user], id: "form-register" , local: true do |form| %>
+        <%= form_with model: [:account, @user], id: "form-register" , local: true do |form| %>
+          <div class="container stretch">
+            <div class="form-register item">
               <p id="title-register-user">Complete seu perfil e tenha acesso total a plataforma</p>
-              <%= form.file_field :avatar %>
               <%= form.hidden_field :id, value: @user.id %>
               <div class="input-box">
                 <%= form.text_field :subsidiary, required: true, placeholder: true %>
@@ -30,14 +29,21 @@
               <div class="input-box">
                 <%= form.submit "Salvar informações" %>
               </div>
-            <% end %>
+            </div>
+
+            <div class="item">
+              <% if @user.avatar.attached? %>
+                <%= image_tag @user.avatar.variant( resize_to_fit: [200, nil]) %>
+              <% end %>
+              <%= file_field_tag :avatar, class: "d-none" %>
+              <%= label_tag :avatar, role: "button" do %>
+                <a class='btn-update-profile' >
+                  <%=image_tag('upload-icon.ico')%>
+                </a>
+              <% end %>
+            </div>
           </div>
-          <div class="item">
-            <% if @user.avatar.attached? %>
-              <%= image_tag @user.avatar.variant( resize_to_fit: [200, nil]) %>
-            <% end %>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>

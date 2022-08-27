@@ -27,6 +27,13 @@
             <span class="field-error"><%= resource.errors.messages[:cpf].first %></span>
           <% end %>
         </div>
+
+        <div class="input-box">
+          <%= f.select :gender, [["Masculino", 1],["Feminino", 0]], required: true, selected: 'ineligible' %>
+          <% if resource.errors.messages[:gender].present? %>
+            <span class="field-error"><%= resource.errors.messages[:gender].first %></span>
+          <% end %>
+        </div>
       </div>
 
       <div class="field-box">

@@ -61,3 +61,17 @@
   }
 
 }
+
+.btn-update-profile {
+  display: flex;
+  width: 85px;
+  height: 50px;
+  background: border-box;
+  border-radius: 30px;
+  justify-content: center;
+}
+.btn-update-profile:hover{
+  background-color: rgb(175, 184, 184);
+  transition: 0.5s;
+}
+
