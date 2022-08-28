@@ -27,13 +27,33 @@
   justify-content: center;
   .box-wrapper{
     background: #FFF;
-    width: 979px;
-    height: 679px;
+    width: 1000px;
+    height: 644px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0px 1px 2px;
+    
+    .stretch {
+      align-items: stretch;
+    }
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .item {
+      flex: 1;
+      margin: 5px;
+      padding: 0 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 

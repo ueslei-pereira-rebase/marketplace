@@ -1,0 +1,43 @@
+<%= render "shared/layout" %>
+<div class='content-middle-body'>
+  <%= render "shared/sidebar_user" %>
+  <div class="wrapper">
+    <div class="box-auth">
+      <div class="box-wrapper">
+        <%= form_with model: [:account, @user], id: "form-register" , local: true do |form| %>
+          <div class="container stretch">
+            <div class="form-register item">
+              <p id="title-register-user">Perfil do Usuário</p>
+              <div class="input-box">
+                <%= form.text_field :subsidiary, value: @user.subsidiary, disabled: true %>
+              </div>
+
+              <div class="input-box">
+                <%= form.text_field :subsidiary, value: @user.department, disabled: true %>
+              </div>
+
+              <div class="input-box">
+                <%= form.text_field :subsidiary, value: @user.phone, disabled: true %>
+              </div>
+
+
+              <div class="input-box">
+                <%= form.text_field :subsidiary, value: @user.mobile, disabled: true %>
+              </div>
+
+              <div class="input-box">
+                  <%= link_to "Atualizar", edit_account_user_path(current_user), class: 'btn-link-to' %>
+              </div>
+            </div>
+
+            <div class="item">
+              <% if @user.avatar.attached? %>
+                <%= image_tag @user.avatar.variant( resize_to_fit: [200, nil]) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
