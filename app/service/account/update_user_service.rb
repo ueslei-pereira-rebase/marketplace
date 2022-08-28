@@ -9,10 +9,13 @@ module Account
       user = User.find(params[:id])
       params.delete(:id)
 
-      if user.update(params) && update_avatar(user)
-        build_result(success: true, context: "Cadastro finalizado", object: user)
-      else
-        build_result(success: false, context: "Não foi possivel completar seu cadsatro, tente novamente", object: user)
+      User.transaction do
+        if user.update(params) && update_avatar(user)
+          user.active! if user.inactive?
+          build_result(success: true, context: "Cadastro finalizado", object: user)
+        else
+          build_result(success: false, context: "Não foi possivel completar seu cadsatro, tente novamente", object: user)
+        end
       end
     end
 

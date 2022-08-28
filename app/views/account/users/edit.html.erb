@@ -35,12 +35,15 @@
               <% if @user.avatar.attached? %>
                 <%= image_tag @user.avatar.variant( resize_to_fit: [200, nil]) %>
               <% end %>
-              <%= file_field_tag :avatar, class: "d-none" %>
-              <%= label_tag :avatar, role: "button" do %>
-                <a class='btn-update-profile' >
-                  <%=image_tag('upload-icon.ico')%>
-                </a>
-              <% end %>
+              <div class="image-upload">
+                <%= label_tag :file_input do %>
+                  <%=image_tag('download.ico')%> 
+                <% end %>
+                <%= form.file_field :avatar, id: 'file_input' %>
+              </div>
+              <% if @user.avatar.previewable? %>
+                <%= image_tag user.avatar.variant(resize_to_limit: [200, nil]).processed  %>
+              <% end %> 
             </div>
           </div>
         <% end %>

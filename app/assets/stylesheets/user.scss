@@ -75,3 +75,10 @@
   transition: 0.5s;
 }
 
+.image-upload > input
+{
+   display: none;
+}
+.image-upload > label{
+  cursor:pointer;
+}
