@@ -25,7 +25,7 @@ class User < ApplicationRecord
       if company.present?
         self.company = company
       else
-        errors.add(:company, "Não está registrada")
+        errors.add(:email, "empresa não está registrada")
       end
     end
 

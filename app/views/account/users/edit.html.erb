@@ -41,9 +41,6 @@
                 <% end %>
                 <%= form.file_field :avatar, id: 'file_input' %>
               </div>
-              <% if @user.avatar.previewable? %>
-                <%= image_tag user.avatar.variant(resize_to_limit: [200, nil]).processed  %>
-              <% end %> 
             </div>
           </div>
         <% end %>
