@@ -26,8 +26,16 @@
               </div>
 
               <div class="input-box">
-                  <%= link_to "Atualizar", edit_account_user_path(current_user), class: 'btn-link-to' %>
+                  <%= link_to "Atualizar", edit_account_user_path(current_user), class: 'btn-user-update btn-primay' %>
               </div>
+
+
+              <div class="input-box">
+                <button type="button" class="btn-user-delete btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Deletar cadastro
+                </button>
+              </div>
+              
             </div>
 
             <div class="item">
@@ -41,3 +49,5 @@
     </div>
   </div>
 </div>
+
+  <%= render "modal_delete_user" %>

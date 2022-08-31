@@ -20,6 +20,13 @@ module Account
       end
     end
 
+    def destroy
+      @user = User.find(params[:id])
+      @user.destroy
+
+      redirect_to new_user_session_path, notice: 'Seu registro foi deletado'
+    end
+
     private
 
     def params_permitted
