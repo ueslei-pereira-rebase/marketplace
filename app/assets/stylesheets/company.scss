@@ -37,12 +37,25 @@
     background: #3483FA;
   }
 
-  .btn-link-to {
+  .btn-user-update {
     border-radius: 8px;
     color: white;
     width: 360px;
     height: 57px;
     background: #3483FA;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .btn-user-delete {
+    border-radius: 8px;
+    color: white;
+    width: 360px;
+    height: 57px;
+    background: #ffc107;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
