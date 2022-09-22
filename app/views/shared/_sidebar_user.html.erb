@@ -1,10 +1,10 @@
 <div class="navbar-side">
-<% if current_user.active? %>
-	<%= link_to image_tag('profile.svg'), account_user_path(current_user), class: 'btn-sidebar' %>
-<% else %>
-	<%= link_to image_tag('profile.svg'), edit_account_user_path(current_user), class: 'btn-sidebar' %>
-<% end %>
+	<% if current_user.active? %>
+		<%= link_to image_tag('profile.svg'), account_user_path(current_user), class: 'btn-sidebar' %>
+	<% else %>
+		<%= link_to image_tag('profile.svg'), edit_account_user_path(current_user), class: 'btn-sidebar' %>
+	<% end %>
 	<% if user_signed_in?  %>
-  	<%= button_to "Sair", destroy_user_session_path, method: :delete, class: "btn-sidebar" %>
+		<%= button_to "Sair", destroy_user_session_path, method: :delete, class: "btn-sidebar" %>
 	<% end %>
 </div>

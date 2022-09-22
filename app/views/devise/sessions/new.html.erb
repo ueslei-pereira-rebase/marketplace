@@ -18,6 +18,8 @@
       <div class="field-input">
         <%= f.password_field :password, autocomplete: "current-password", class: 'input-data', placeholder: 'Senha' %>
       </div>
+                    <span class="capslock-off">Caps lock ligado</span>
+
 
       <% if devise_mapping.rememberable? %>
         <div class="field-check">
@@ -29,6 +31,7 @@
       <div class="btn-sign-in">
         <%= f.submit "Entrar" %>
       </div>
+
     <% end %>
     <%= render "devise/shared/links" %>
     </div>
