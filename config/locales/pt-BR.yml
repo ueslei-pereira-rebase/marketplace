@@ -1,6 +1,10 @@
 ---
 pt-BR:
   activerecord:
+    attributes:
+      product:
+        list: 0
+        price: R$
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

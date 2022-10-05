@@ -1,0 +1,40 @@
+.form-register{
+  .list{
+    display: flex;
+  }
+  #title-register-advertise{
+    font-family: "sans-serif";
+    font-size: 36px;
+  }
+
+  .title, .body{
+    text-align: initial;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advertise-details{
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+
+  #product_list, #product_price {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100px;
+    margin-left: 20px;
+  }
+
+  #product_body{
+    height: 170px;
+  }
+
+  #product_title, #product_body{
+    border: 1px solid black;
+  }
+  input[type="number"]::placeholder{
+    text-align: center;
+  }
+}
