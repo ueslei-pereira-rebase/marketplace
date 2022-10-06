@@ -20,7 +20,7 @@
     align-self: start;
   }
 
-  #product_list, #product_price {
+  #product_amount, #product_price {
     border: none;
     border-bottom: 1px solid black;
     width: 100px;
@@ -37,4 +37,92 @@
   input[type="number"]::placeholder{
     text-align: center;
   }
+}
+
+.box-auth-history-advertise {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  .box-wrapper-history-advertise{
+    background: #FFF;
+    width: 1000px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px;
+    
+    .stretch {
+      align-items: stretch;
+    }
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .item {
+      flex: 1;
+      margin: 5px;
+      padding: 0 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .col-item-history{
+      height: 100%;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      color: #796E6E;
+
+      .value-item{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.direct-upload {
+  display: inline-block;
+  position: relative;
+  padding: 2px 4px;
+  margin: 0 3px 3px 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.direct-upload--pending {
+  opacity: 0.6;
+}
+
+.direct-upload__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.2;
+  background: #0076ff;
+  transition: width 120ms ease-out, opacity 60ms 60ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+
+.direct-upload--complete .direct-upload__progress {
+  opacity: 0.4;
+}
+
+.direct-upload--error {
+  border-color: red;
+}
+
+input[type=file][data-direct-upload-url][disabled] {
+  display: none;
 }

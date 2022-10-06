@@ -39,7 +39,7 @@
                 <%= label_tag :file_input do %>
                   <%=image_tag('download.ico')%> 
                 <% end %>
-                <%= form.file_field :avatar, id: 'file_input' %>
+                <%= form.file_field :avatar, direct_upload: true, id: 'file_input' %>
               </div>
             </div>
           </div>

@@ -1,0 +1,31 @@
+<%= render "shared/layout" %>
+<div class='content-middle-body'>
+  <%= render "shared/sidebar_user" %>
+  <div class="wrapper">
+    <div class="box-auth-history-advertise">
+      <% @advertise_products.each do |item| %>
+        <div class="box-wrapper-history-advertise ">
+          <div class="col-item-history">
+          <% if item.images.attached? %>
+            <%= image_tag item.images.first.representation(resize_to_fit: [150, nil]) %>
+          <% else %>
+            <%= image_tag('sem-foto.jpg', width: "150px") %>
+          <% end %>
+          </div>
+          <div class="col-item-history description">
+          <div><span>Data do anuncio:  </span><%=  item.created_at.strftime("%d/%m/%y") %></div>
+            <div><span class="value-item"><%= item.title %></span></div>
+            <div><span class="value-item">Valor:</span><%= number_to_currency(item.price) %></div>
+            <div><span class="value-item"><%= image_tag('handshack-green.svg') %></span><%= "#{item.interested_amount}/#{item.amount}" %></div>
+          </div>
+          <div class="col-item-history">
+
+          </div>
+          <div class="col-item-history">
+            <%= image_tag('chat.svg') %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

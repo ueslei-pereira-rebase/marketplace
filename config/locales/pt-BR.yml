@@ -5,6 +5,7 @@ pt-BR:
       product:
         list: 0
         price: R$
+        amount: 0
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
