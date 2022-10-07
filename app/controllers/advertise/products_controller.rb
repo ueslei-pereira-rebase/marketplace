@@ -3,7 +3,10 @@ module Advertise
     before_action :authenticate_user!
 
     def index
-      @advertise_products = current_user.products.all
+      @advertise_products = Product.where(user_id: current_user)
+        .order(:created_at)
+        .page(params[:page])
+        .per(4)
     end
 
     def new
@@ -15,6 +18,20 @@ module Advertise
       redirect_to advertise_products_path
     end
 
+    def desactive
+      advertise = current_user.products.find(params[:id])
+      advertise.desactive!
+
+      redirect_to advertise_products_path
+    end
+
+    def active
+      advertise = current_user.products.find(params[:id])
+      advertise.active!
+
+      redirect_to advertise_products_path
+    end
+    
     private
 
     def params_permitted

@@ -44,10 +44,11 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  height: 90%;
   .box-wrapper-history-advertise{
     background: #FFF;
     width: 1000px;
-    height: 150px;
+    height: 115px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,4 +126,48 @@
 
 input[type=file][data-direct-upload-url][disabled] {
   display: none;
+}
+
+.wrapper-history{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+}
+
+.btn-status{
+  width: 130px;
+  height: 35px;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+
+}
+
+
+.btn-desactive{
+  background: #D73E3E;
+  color: #fff;
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.btn-active{
+  background: #36F36B;
+  color: #351616;
+
+  a{
+    color: #351616;
+    text-decoration: none;
+  }
+}
+
+.opacity-true{
+  opacity: 0.5;
 }

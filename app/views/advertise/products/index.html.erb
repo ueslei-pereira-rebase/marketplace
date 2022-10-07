@@ -1,15 +1,15 @@
 <%= render "shared/layout" %>
 <div class='content-middle-body'>
   <%= render "shared/sidebar_user" %>
-  <div class="wrapper">
+  <div class="wrapper-history">
     <div class="box-auth-history-advertise">
       <% @advertise_products.each do |item| %>
-        <div class="box-wrapper-history-advertise ">
+        <div class="box-wrapper-history-advertise opacity-<%="#{item.desactive?}"%>">
           <div class="col-item-history">
           <% if item.images.attached? %>
-            <%= image_tag item.images.first.representation(resize_to_fit: [150, nil]) %>
+            <%= image_tag item.images.first.representation(resize_to_fit: [115, nil]) %>
           <% else %>
-            <%= image_tag('sem-foto.jpg', width: "150px") %>
+            <%= image_tag('sem-foto.jpg', width: "115px") %>
           <% end %>
           </div>
           <div class="col-item-history description">
@@ -19,7 +19,12 @@
             <div><span class="value-item"><%= image_tag('handshack-green.svg') %></span><%= "#{item.interested_amount}/#{item.amount}" %></div>
           </div>
           <div class="col-item-history">
-
+            <div class="btn-status btn-active">
+            <%= link_to_if item.desactive?, "#{item.active? ? 'Ativado': 'Ativar'}", advertise_product_active_path(item) %>
+            </div>
+            <div class="btn-status btn-desactive">
+            <%= link_to_if item.active?, "#{item.desactive? ? 'Desativado': 'Desativar'}", advertise_product_desactive_path(item) %>
+            </div>
           </div>
           <div class="col-item-history">
             <%= image_tag('chat.svg') %>
@@ -27,5 +32,6 @@
         </div>
       <% end %>
     </div>
+        <%= paginate @advertise_products %>
   </div>
 </div>

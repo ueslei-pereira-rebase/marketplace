@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   namespace :advertise do
     resources :products
+    get 'desactive/:id', to: 'products#desactive', as: 'product_desactive'
+    get 'active/:id', to: 'products#active', as: 'product_active'
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
