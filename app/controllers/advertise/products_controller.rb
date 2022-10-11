@@ -4,7 +4,7 @@ module Advertise
 
     def index
       @advertise_products = Product.where(user_id: current_user)
-        .order(:created_at)
+        .order(created_at: :desc)
         .page(params[:page])
         .per(4)
     end
@@ -18,18 +18,24 @@ module Advertise
       redirect_to advertise_products_path
     end
 
+    def edit
+      @advertise_products = Product.find(params[:id])
+      #terminar
+    end
+
+
     def desactive
       advertise = current_user.products.find(params[:id])
       advertise.desactive!
 
-      redirect_to advertise_products_path
+      redirect_to advertise_products_path(page: params[:page])
     end
 
     def active
       advertise = current_user.products.find(params[:id])
       advertise.active!
 
-      redirect_to advertise_products_path
+      redirect_to advertise_products_path(page: params[:page])
     end
     
     private

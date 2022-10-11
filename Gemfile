@@ -55,3 +55,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "importmap-rails", "~> 1.1"
+
+gem "hotwire-rails", "~> 0.1.3"

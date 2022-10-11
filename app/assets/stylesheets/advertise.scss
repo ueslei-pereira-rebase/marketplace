@@ -86,6 +86,10 @@
       .value-item{
         margin-right: 10px;
       }
+
+      a:hover{
+        filter: drop-shadow(2px 4px 6px black);
+      }
     }
   }
 }
@@ -149,23 +153,43 @@ input[type=file][data-direct-upload-url][disabled] {
 }
 
 
-.btn-desactive{
+.btn-desactive-true, .btn-desactive-false{
   background: #D73E3E;
   color: #fff;
+
+  filter: opacity(0.5);
+
   a{
     color: #fff;
     text-decoration: none;
   }
 }
 
-.btn-active{
+.btn-active-true, .btn-active-false{
   background: #36F36B;
   color: #351616;
+  filter: drop-shadow(2px 4px 6px black);
 
   a{
     color: #351616;
     text-decoration: none;
   }
+}
+
+.btn-active-false{
+  filter: opacity(0.5)
+}
+
+.btn-desactive-false{
+  filter: opacity(0.5)
+}
+
+.btn-active-true{
+  filter: drop-shadow(2px 4px 6px black)
+}
+
+.btn-desactive-true{
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .opacity-true{
