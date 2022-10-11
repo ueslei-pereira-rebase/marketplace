@@ -8,7 +8,7 @@
   display: inline-block;
 }
 
-.navbar-side .btn-sidebar {
+.navbar-side .btn-sidebar-false {
   border: none;
   color: black;
   font-family: 'Roboto';
@@ -18,6 +18,17 @@
   width: 100%;
 }
 
-.navbar-side .btn-sidebar:hover{
+.navbar-side .btn-sidebar-true {
+  border: none;
+  color: black;
+  font-family: 'Roboto';
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  background-color: #9FFFDD;
+}
+
+.navbar-side .btn-sidebar-false:hover{
   background-color: #9FFFDD;
 }

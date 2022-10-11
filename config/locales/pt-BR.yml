@@ -1,6 +1,11 @@
 ---
 pt-BR:
   activerecord:
+    attributes:
+      product:
+        list: 0
+        price: R$
+        amount: 0
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -164,6 +169,13 @@ pt-BR:
         email: E-mail
         password: Senha
         password_confirmation: Confirme sua senha
+  views:
+    pagination:
+      first: '<<'
+      last: '>>'
+      previous: '<'
+      next: '>'
+      truncate: '&hellip;'
   number:
     currency:
       format:
