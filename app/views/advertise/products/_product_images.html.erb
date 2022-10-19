@@ -1,0 +1,17 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <% if @product.images.attached? %>
+      <%  @product.images.each_with_index do |image, index| %>
+        <%= button_tag image_tag(image.representation(resize_to_fit: [70, nil])), class: "#{index.zero? ? 'active': "Slide #{index+1}"}",  "data-bs-target"=> "#carouselExampleIndicators" ,  "data-bs-slide-to" => "#{index}" %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="carousel-inner">
+    <%  @product.images.each_with_index do |image, index| %>
+      <div class="carousel-item <%= index==0 ? 'active' : '' %>" >
+        <%= image_tag(image, class: 'd-block w-100') %>
+      </div>
+    <% end %>
+  </div>
+</div>

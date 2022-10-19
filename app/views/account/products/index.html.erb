@@ -7,9 +7,9 @@
         <div class="box-wrapper-history-advertise opacity-<%="#{item.desactive?}"%>">
           <div class="col-item-history">
             <% if item.images.attached? %>
-              <%= link_to image_tag(item.images.first.representation(resize_to_fit: [115, nil])), edit_advertise_product_path(item)  %>
+              <%= link_to image_tag(item.images.first.representation(resize_to_fit: [115, nil])), advertise_product_path(item)  %>
             <% else %>
-              <%= link_to (image_tag('sem-foto.jpg', width: "115px")), edit_advertise_product_path(item) %>
+              <%= link_to (image_tag('sem-foto.jpg', width: "115px")), advertise_product_path(item) %>
             <% end %>
           </div>
           <div class="col-item-history description">
@@ -20,10 +20,10 @@
           </div>
           <div class="col-item-history">
             <div class="btn-status btn-active-<%= item.active? %>">
-              <%= link_to_if item.desactive?, "#{item.active? ? 'Ativado': 'Ativar'}", advertise_product_active_path(item, page: @advertise_products.current_page) %>
+              <%= link_to_if item.desactive?, "#{item.active? ? 'Ativado': 'Ativar'}", active_account_product_path(item, page: @advertise_products.current_page) %>
             </div>
             <div class="btn-status btn-desactive-<%= item.desactive? %>">
-              <%= link_to_if item.active?, "#{item.desactive? ? 'Desativado': 'Desativar'}", advertise_product_desactive_path(item, page: @advertise_products.current_page) %>
+              <%= link_to_if item.active?, "#{item.desactive? ? 'Desativado': 'Desativar'}", desactive_account_product_path(item, page: @advertise_products.current_page) %>
             </div>
           </div>
           <div class="col-item-history">

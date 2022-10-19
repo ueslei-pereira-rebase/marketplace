@@ -1,0 +1,35 @@
+<%= render "shared/layout" %>
+<div class='content-middle-body'>
+  <%= render "shared/sidebar_user" %>
+  <div class="wrapper">
+    <div class="box-auth ">
+      <div class="box-wrapper advertise-box">
+        <div class="content-top">
+          <div class="container stretch">
+            <div class="form-register item">
+
+              <div class="side-left">
+              <% if @product.images.attached? %>
+                <%= render 'product_images', locals: {product: @product} %>
+              <% else %>
+                <%= (image_tag('sem-foto.jpg', width: "115px")) %>
+              <% end %>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="side-right">
+                <%= render 'description_product', locals: {product: @product} %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-bottom">
+          <div class="wrapper-bottom">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

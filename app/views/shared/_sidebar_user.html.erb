@@ -1,6 +1,6 @@
 <div class="navbar-side">
-	<%= link_to "Cadastrar anuncio", new_advertise_product_path, class: "btn-sidebar-#{current_page?(new_advertise_product_path)}" %>
-	<%= link_to "Meus anuncios", advertise_products_path, class: "btn-sidebar-#{current_page?(advertise_products_path)}" %>
+	<%= link_to "Cadastrar anuncio", new_account_product_path, class: "btn-sidebar-#{current_page?(new_account_product_path)}" %>
+	<%= link_to "Meus anuncios", account_products_path, class: "btn-sidebar-#{current_page?(account_products_path)}" %>
 	<% if current_user.active? %>
 		<%= link_to image_tag('profile.svg'), account_user_path(current_user), class: "btn-sidebar-#{current_page?(account_user_path(current_user))}" %>
 	<% else %>
