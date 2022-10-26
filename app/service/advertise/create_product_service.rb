@@ -9,7 +9,7 @@ module Advertise
 
     def execute
       ActiveRecord::Base.transaction do
-        user.products.create(params)
+        user.products.create(params.merge(company_id: user.company.id))
         #terminar
       end
     end

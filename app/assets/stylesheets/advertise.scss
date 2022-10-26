@@ -20,6 +20,9 @@
 
 .carousel-indicators {
   position: relative !important;
+  .w-size{
+    width: 408px;
+  }
 }
 
 .carousel-control-prev-icon {
@@ -50,3 +53,4 @@
   font-family: Arial, Helvetica, sans-serif;
 
 }
+
