@@ -11,7 +11,6 @@ module Advertise
     end
 
     def join
-      byebug
       Advertise::JoinListProductService.new(params, current_user).execute
     end
 
