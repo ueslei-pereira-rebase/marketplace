@@ -9,11 +9,11 @@
             <div class="form-register item">
 
               <div class="side-left">
-              <% if @product.images.attached? %>
-                <%= render 'product_images', locals: {product: @product} %>
-              <% else %>
-                <%= (image_tag('sem-foto.jpg', width: "115px")) %>
-              <% end %>
+                <% if @product.images.attached? %>
+                  <%= render 'product_images', locals: {product: @product} %>
+                <% else %>
+                  <%= (image_tag('sem-foto.jpg', width: "115px")) %>
+                <% end %>
               </div>
             </div>
 
@@ -23,7 +23,11 @@
               </div>
             </div>
           </div>
-        </div>
+          <div>
+            <div >
+              <%= render 'interest', locals: {product: @product} %>
+            </div>
+          <div>
 
         <div class="content-bottom">
           <div class="wrapper-bottom">

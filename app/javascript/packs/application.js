@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 import 'bootstrap'
-import "@hotwired/turbo-rails"
 import "@fontsource/roboto";
 require("@rails/ujs").start()
 // prequire("@rails/activestorage").start()

@@ -17,7 +17,12 @@ Rails.application.routes.draw do
   end
 
   namespace :advertise do
-    resources :products
+    resources :products  do
+      member do
+
+        get :join, to: 'products#join'
+      end
+    end
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -1,5 +1,6 @@
 module Advertise
   class ProductsController < ApplicationController
+
     before_action :authenticate_user!
 
     def show
@@ -7,6 +8,11 @@ module Advertise
 
     rescue ActiveRecord::RecordNotFound
       redirect_to account_products_path, flash[:alert] = "Houve um erro, produto nao encontrado"
+    end
+
+    def join
+      byebug
+      Advertise::JoinListProductService.new(params, current_user).execute
     end
 
   end

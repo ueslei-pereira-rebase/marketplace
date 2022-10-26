@@ -16,7 +16,7 @@
             <div><span>Data do anuncio:  </span><%=  item.created_at.strftime("%d/%m/%y") %></div>
             <div><span class="value-item"><%= item.title %></span></div>
             <div><span class="value-item">Valor:</span><%= number_to_currency(item.price) %></div>
-            <div><span class="value-item"><%= image_tag('handshack-green.svg') %></span><%= "#{item.interested_amount}/#{item.amount}" %></div>
+            <div><span class="value-item"><%= image_tag('join.svg') %></span><%= "#{item.interested_amount}/#{item.amount}" %></div>
           </div>
           <div class="col-item-history">
             <div class="btn-status btn-active-<%= item.active? %>">
