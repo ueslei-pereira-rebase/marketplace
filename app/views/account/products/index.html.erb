@@ -7,7 +7,7 @@
         <div class="box-wrapper-history-advertise opacity-<%="#{item.desactive?}"%>">
           <div class="col-item-history">
             <% if item.images.attached? %>
-              <%= link_to image_tag(item.images.first.representation(resize_to_fit: [115, nil])), advertise_product_path(item)  %>
+              <%= link_to image_tag(item.images.first.representation(resize_and_pad: [115, 115])), advertise_product_path(item)  %>
             <% else %>
               <%= link_to (image_tag('sem-foto.jpg', width: "115px")), advertise_product_path(item) %>
             <% end %>

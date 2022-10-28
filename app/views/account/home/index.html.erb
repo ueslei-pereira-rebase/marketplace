@@ -10,7 +10,7 @@
               <div class="item-advertise" >
                 <div class="image-advertise">
                   <% if item.images.attached? %>
-                      <%= image_tag(item.images.first.representation(resize_to_fit: [117, nil])) %>
+                      <%= image_tag(item.images.first.representation(resize_to_limit: [115, 115])) %>
                     <% else %>
                       <%=  image_tag('sem-foto.jpg', width: "115px") %>
                     <% end %>
@@ -33,6 +33,6 @@
         </div>
       <% end %>
     </div>
-        <%= paginate @products %>
+    <%= paginate @products %>
   </div>
 </div>

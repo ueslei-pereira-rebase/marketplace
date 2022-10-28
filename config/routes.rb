@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome', to: "welcome#index"
+  
   devise_for :admins
   devise_for :users
   
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
 
   namespace :account do
     root 'home#index'
+    get 'search', to: 'home#search'
     resources :users, only: %i[edit update show destroy]
     resources :products do
       get 'desactive', on: :member
@@ -16,10 +19,11 @@ Rails.application.routes.draw do
     end
   end
 
+
+
   namespace :advertise do
     resources :products  do
       member do
-
         get :join, to: 'products#join'
       end
     end

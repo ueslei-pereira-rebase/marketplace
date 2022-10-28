@@ -12,6 +12,9 @@ class Company < ApplicationRecord
   before_create :name_domain
 
   scope :products_active, ->(company) { find(company).products.active }
+  scope :search, ->(query, company) { find(company).products.where('LOWER(title) like ? OR LOWER(body) like ?', 
+                                      "%#{query}%", "%#{query}%").active } 
+
 
   # def is_employee?(email)
   #   return true if Employee.find_by(email: email)

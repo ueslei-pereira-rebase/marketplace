@@ -3,11 +3,17 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   .box-wrapper-home-advertise{
     width: 1000px;
     display: flex;
     justify-content: space-evenly;
+    padding: 10px;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
     .item-advertise{
       width: 224px;
       height: 330px;
