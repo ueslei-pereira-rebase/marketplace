@@ -6,7 +6,7 @@ class ProductPresenter < SimpleDelegator
   end
 
   def title
-    product.title
+    product.title.capitalize
   end
 
   def showcase
@@ -18,7 +18,7 @@ class ProductPresenter < SimpleDelegator
   end
 
   def description
-    product.body
+    product.body.capitalize
   end
 
   def price

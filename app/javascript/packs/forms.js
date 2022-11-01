@@ -18,6 +18,22 @@ $(function() {
     }
   });
 
+  $("#submit-search").click(function(){
+    valor =  ($(".form-control").val())
+    if (valor === ''){
+      return false
+    }
+  })
+
+  $(".card-advertise-false").click(function(){
+    searchIsBlank();
+    return false
+  })
+
+  function searchIsBlank() {
+    $( ".alert-error-minutes" ).slideUp( 500 ).fadeIn( 400 ).delay(1000).fadeOut(800)
+
+  }
 });
 
 // direct_uploads.js
