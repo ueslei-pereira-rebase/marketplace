@@ -12,10 +12,36 @@
 	text-align: center;
 	font-size: 1.5em;
 	height: 80%;
-	width: 18%;
+	width: 200px;
 	padding: 5px;
 }
 
+.search-bar, .mb-3{
+	padding: 10px 0 10px 0;
+	display: flex;
+	justify-content: center;
+	.input-group-append{
+		width: 60px;
+    height: 38px;
+    background: #ced4da;
+    border-radius: 0 8px 8px 0;
+	}
+}
+
+
 .search-bar{
-	padding: 19px 0 69px 0;
+	.search-form{
+		display: inline-flex;
+    width: 700px;
+		.form-control{
+			border-radius: 8px 0 0 8px
+		}
+		.submit-search{
+			background-color: #ced4da;
+			border-radius: 0 8px 8px 0;
+			border: none;
+			padding: 11px 20px 11px 20px;
+			
+		}
+	}
 }

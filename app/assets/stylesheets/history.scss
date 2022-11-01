@@ -3,7 +3,7 @@
     display: flex;
   }
   #title-register-advertise{
-    font-family: "sans-serif";
+    font-family: Roboto;
     font-size: 36px;
   }
 
@@ -133,11 +133,11 @@ input[type=file][data-direct-upload-url][disabled] {
 }
 
 .wrapper-history{
-  display: flex;
+  display: grid;
   flex: 1;
   justify-content: center;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
 }
 
 .btn-status{
